@@ -17,7 +17,7 @@
       qt6Packages.qtstyleplugin-kvantum
       libsForQt5.qtstyleplugin-kvantum
       libsForQt5.qt5ct
-      breeze-icons
+      kdePackages.breeze-icons
     ];
 
     sessionVariables = {
@@ -33,13 +33,13 @@
     "kdeglobals".source = "${pkgs.qogir-kde}/share/color-schemes/QogirLight.colors";
     "Kvantum/Qogir-light/Qogir-light.kvconfig".source = builtins.fetchurl {
       url = "https://raw.githubusercontent.com/vinceliuice/Qogir-kde/master/Kvantum/Qogir-light/Qogir-light.kvconfig";
-      sha256 = "01d53jv0gn5p65dcinrzsgd396n7wd0yjynp9xkf08zw1ic766vd";
+      sha256 = "042dfij55dzmmzsgv2mj123a148kdxcxs6w48b0i352q45aaxjg1";
     };
 
-    "Kvantum/Qogir-light/Qogir-light.svg".source = builtins.fetchurl {
-      url = "https://raw.githubusercontent.com/vinceliuice/Qogir-kde/master/Kvantum/Qogir-light/Qogir-light.svg";
-      sha256 = "0abilacalysr1hqz4gbv1k3r680h7f9a87cqhyr0hi3i4pwh8yq9";
-    };
+    # "Kvantum/Qogir-light/Qogir-light.svg".source = builtins.fetchurl {
+    #   url = "https://raw.githubusercontent.com/vinceliuice/Qogir-kde/master/Kvantum/Qogir-light/Qogir-light.svg";
+    #   sha256 = "1p7i5fmq519a5as1zh90gfk2jij0a5b9fxh019vswsshmyp87zrs";
+    # };
 
     "Kvantum/kvantum.kvconfig".text = ''
       [General]

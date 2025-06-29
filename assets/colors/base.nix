@@ -1,0 +1,33 @@
+{
+  black =         "#3b4252";  #rgb(59, 66, 82)
+  red =           "#bf616a";  #rgb(191, 97, 106)
+  green =         "#a3be8c";  #rgb(163, 190, 140)
+  yellow =        "#dda97d";  #rgb(221, 169, 125)
+  blue =          "#5e81ac";  #rgb(94, 129, 172)
+  magenta =       "#b48ead";  #rgb(180, 142, 173)
+  cyan =          "#88c0c0";  #rgb(136, 192, 192)
+  white =         "#e5e9f0";  #rgb(229, 233, 240)
+  pink =          "#f38ba8";  #rgb(243, 139, 168)
+  orange =        "#fab387";  #rgb(250, 179, 135)
+
+  brightBlack =   "#b5bcc9";  #rgb(181, 188, 201)
+  brightRed =     "#daa4aa";  #rgb(218, 164, 170)
+  brightGreen =   "#bed1ad";  #rgb(190, 209, 173)
+  brightYellow =  "#ebcb8b";  #rgb(235, 203, 139)
+  brightBlue =    "#abbdd4";  #rgb(171, 189, 212)
+  brightMagenta = "#ccb3c7";  #rgb(204, 179, 199)
+  brightCyan =    "#a4cfdb";  #rgb(164, 207, 219)
+  brightWhite =   "#eceff4";  #rgb(236, 239, 244)
+  brightPink =    "#f5c2e7";  #rgb(245, 194, 231)
+  brightOrange =  "#efcdbb";  #rgb(239, 205, 187)
+
+
+  anthracite =    "#6c7086";  #rgb(108, 112, 134)
+  darkSlateGray = "#2e3440";  #rgb(46, 52, 64)
+  gainsboro =     "#d8dee9";  #rgb(216, 222, 233)
+  ghostWhite =    "#eff1f6";  #rgb(239, 241, 246)
+  grannySmith =   "#a6e3a1";  #rgb(166, 227, 161)
+  lavender =      "#b4befe";  #rgb(180, 190, 254)
+  sky =           "#89dceb";  #rgb(137, 220, 235)
+  teal =          "#94e2d5";  #rgb(148, 226, 213)
+}

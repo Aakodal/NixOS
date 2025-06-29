@@ -1,3 +1,3 @@
 _: {
-  packages = self: _: import ../packages { pkgs = self; };
+  packages = self: _: import ./packages { pkgs = self; };
 }

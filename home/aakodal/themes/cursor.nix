@@ -3,16 +3,20 @@
   ...
 }: {
   home.pointerCursor = {
-    package = pkgs.libsForQt5.breeze-icons;
-    name = "Breeze Light";
+    package = pkgs.bibata-cursors;
+    name = "Bibata-Modern-Ice";
 
-    size = 24;
+    size = 32;
     gtk.enable = true;
     x11.enable = true;
   };
 
-  gtk.cursorTheme = {
-    name = "Breeze Light";
-    package = pkgs.libsForQt5.breeze-icons;
+  gtk = {
+    enable = true;
+    cursorTheme = {
+      name = "Bibata-Modern-Ice";
+      package = pkgs.bibata-cursors;
+      size = 32;
+    };
   };
 }

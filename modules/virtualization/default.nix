@@ -32,4 +32,6 @@
       };
     };
   };
+
+  users.users.aakodal.extraGroups = [ "libvirt" "libvirtd" ];
 }

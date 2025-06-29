@@ -1,4 +1,5 @@
 {
+  assets,
   config,
   inputs,
   outputs,
@@ -9,7 +10,7 @@
     useUserPackages = true;
     useGlobalPkgs = true;
     extraSpecialArgs = {
-      inherit inputs outputs self;
+      inherit assets inputs outputs self;
     };
     users.aakodal = ./aakodal;
   };

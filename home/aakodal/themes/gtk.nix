@@ -30,7 +30,7 @@ in {
     };
 
     font = {
-      name = "Noto Sans Regular";
+      name = "Product Sans";
       size = 10;
     };
   };

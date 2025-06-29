@@ -1,6 +1,8 @@
 _: {
   imports = [
-    ./cli
-    ./gui
+    ./macchina
+    ./bat.nix
+    ./neovim.nix
+    ./util.nix
   ];
 }

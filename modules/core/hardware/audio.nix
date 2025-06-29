@@ -7,11 +7,6 @@ _: {
     pulse.enable = true;
   };
 
-  sound = {
-    enable = true;
-    mediaKeys.enable = true;
-  };
-
   systemd.user.services = {
     pipewire.wantedBy = ["default.target"];
     pipewire-pulse.wantedBy = ["default.target"];

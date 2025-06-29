@@ -1,9 +1,21 @@
-_: {
-  xdg.mimeApps = {
-    enable = true;
+{
+  pkgs,
+  ...
+}: {
+  xdg = {
+    desktopEntries.nemo = {
+      name = "Nemo";
+      exec = "${pkgs.nemo-with-extensions}/bin/nemo";
+    };
 
-    defaultApplications = {
-      "inode/directory" = "nemo.desktop";
+    mimeApps = {
+      enable = true;
+
+      defaultApplications = {
+        "inode/directory" = "nemo.desktop";
+        "application/x-gnome-saved-search" = [ "nemo.desktop" ];
+      };
     };
   };
+
 }
