@@ -1,19 +1,10 @@
 { assets }: {
-  layout = {
-    "bar.layouts" = {
-      "0" = {
-        left = [ "dashboard" "windowtitle" ];
-        middle = [ "workspaces" ];
-        right = [ "volume" "network" "bluetooth" "battery" "systray" "clock" "notifications" ];
-      };
-    };
-  };
-
   menus = {
     dashboard = {
       directories.enabled = false;
 
-      stats.enable_gpu = true;
+      stats.enable_gpu = false;
+      # GPU stats come from gpustat package which only supports NVIDIA. Niflheim is an AMD computer. Me sad
 
       powermenu.avatar = {
         name = "Aakodal";
@@ -90,6 +81,14 @@
     notifications = {
       show_total = true;
       hideCountWhenZero = true;
+    };
+
+    layouts = {
+      "*" = {
+        left = [ "dashboard" "windowtitle" ];
+        middle = [ "workspaces" ];
+        right = [ "volume" "network" "bluetooth" "battery" "systray" "clock" "notifications" ];
+      };
     };
   };
 }

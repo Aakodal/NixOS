@@ -17,11 +17,6 @@
     };
 
     hyprland.url = "github:hyprwm/Hyprland";
-    hyprpanel = {
-      url = "github:Jas-SinghFSU/HyprPanel";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
 
     # Nix Language server
     nil = {
