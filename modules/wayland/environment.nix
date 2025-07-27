@@ -1,5 +1,6 @@
 {
   inputs,
+  lib,
   ...
 }: {
   environment.variables = {
@@ -7,7 +8,7 @@
     _JAVA_AWT_WM_NONEREPARENTING = "1";
     GDK_BACKEND = "wayland,x11";
 
-    QT_AUTO_SCREEN_SCALE_FACTOR = "1";
+    QT_AUTO_SCREEN_SCALE_FACTOR = lib.mkDefault "1";
     QT_QPA_PLATFORM = "wayland;xcb";
     QT_WAYLAND_DISABLE_WINDOWDECORATION = "1";
     QT_QPA_PLATFORMTHEME = "qt5ct";

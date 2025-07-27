@@ -7,6 +7,7 @@ _: {
       "$mod, Return, exec, alacritty"
       "$mod, Q, killactive"
       "$mod SHIFT, E, exec, '/home/aakodal/.config/rofi/scripts/powermenu.sh'"
+      "$mod SHIFT, P, exec, '/home/aakodal/.config/rofi/scripts/powerprofiles.sh'"
       "$mod, P, pseudo, "
       "$mod, J, togglesplit, "
       "$mod, F, togglefloating, "

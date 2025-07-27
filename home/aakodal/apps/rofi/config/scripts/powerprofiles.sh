@@ -4,8 +4,8 @@
 rasi="$HOME/.config/rofi/rasi/powerprofiles.rasi"
 
 # Options
-performance=""
-balanced=""
+performance="󱐋"
+balanced="󰗑"
 powersaver=""
 
 # Rofi CMD
@@ -16,6 +16,18 @@ rofi_cmd() {
 
 # Pass variables to rofi dmenu
 run_rofi() {
+	current="$(powerprofilesctl get)"
+	case ${current} in
+		"performance")
+			performance="$performance✓"
+			;;
+		"balanced")
+			balanced="$balanced ✓"
+			;;
+		"power-saver")
+			powersaver="$powersaver ✓"
+			;;
+	esac
 	echo -e "$performance\n$balanced\n$powersaver" | rofi_cmd
 }
 

@@ -22,5 +22,6 @@
     findutils
     pciutils
     android-tools
+    dotnet-sdk
   ];
 }

@@ -20,13 +20,13 @@
       kdePackages.breeze-icons
     ];
 
-    sessionVariables = {
-      QT_STYLE_OVERRIDE = "kvantum";
-      QT_AUTO_SCREEN_SCALE_FACTOR = "1";
-      QT_QPA_PLATFORM = "wayland;xcb";
-      QT_WAYLAND_DISABLE_WINDOWDECORATION = "1";
-      DISABLE_QT5_COMPAT = "0";
-    };
+    # sessionVariables = { # Already defined in wayland env file
+    #   QT_STYLE_OVERRIDE = "kvantum";
+    #   QT_AUTO_SCREEN_SCALE_FACTOR = "1";
+    #   QT_QPA_PLATFORM = "wayland;xcb";
+    #   QT_WAYLAND_DISABLE_WINDOWDECORATION = "1";
+    #   DISABLE_QT5_COMPAT = "0";
+    # };
   };
 
   xdg.configFile = {

@@ -4,6 +4,7 @@ _: {
       "opacity 0.75 0.75, class:nemo"
       "float, class:flameshot"
       "opacity 0.75 0.75, class:WebCord"
+      "fullscreen, class:dotnet, title:^Terraria(.*)"
     ];
   };
 }

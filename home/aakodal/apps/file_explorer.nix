@@ -4,7 +4,8 @@
 }: {
   home.packages = with pkgs; [
     nemo-with-extensions
-    kdePackages.ark
+    nemo-fileroller
+    file-roller
   ];
 
   dconf.settings = {

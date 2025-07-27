@@ -22,10 +22,9 @@ _: {
         }
         {
           timeout = 300;
-          on-timeout = "loginctl lock-session && hyprctl dispatch dpms off";
+          on-timeout = "loginctl lock-session && sleep 1 && hyprctl dispatch dpms off";
           on-resume = "hyprctl dispatch dpms on && brightnessctl -r";
         }
-
         {
           timeout = 1800;
           on-timeout = "systemctl suspend";

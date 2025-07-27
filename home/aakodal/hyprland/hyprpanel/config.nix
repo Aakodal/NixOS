@@ -70,12 +70,18 @@
   };
 
   bar = {
+    systray.customIcons = {
+      steam = {
+        icon = "󰓓";
+        color = assets.colors.hyprpanel.systrayIcons.steam;
+      };
+    };
     customModules.worldclock.tz = [ "Europe/Paris" ];
     clock.format = "%A %d %b %H:%M:%S";
     launcher.autoDetectIcon = true;
     network = {
       showWifiInfo = true;
-      truncation_size = 11;
+      truncation_size = 12;
     };
 
     notifications = {

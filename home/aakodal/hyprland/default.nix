@@ -21,6 +21,8 @@ in {
     hyprpicker
     hyprpolkitagent
     hyprprop
+    hyprland-qt-support
+    hyprland-qtutils
     hypridle
     hyprsunset
     wbg

@@ -6,6 +6,4 @@ _: {
     ./fonts.nix
     ./locale.nix
  ];
-
-  config.programs.zsh.enable = true;
 }

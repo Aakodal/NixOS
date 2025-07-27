@@ -62,20 +62,10 @@ run_cmd() {
 	selected="$(confirm_exit)"
 	if [[ "$selected" == "$yes" ]]; then
 		if [[ $1 == '--shutdown' ]]; then
-			if [[ "$DESKTOP_SESSION" == 'hyprland' ]]; then
-				hyprctl dispatch -- exit && sleep 1 && systemctl poweroff
-			else
-				systemctl poweroff
-			fi
+			systemctl poweroff
 		elif [[ $1 == '--reboot' ]]; then
-			if [[ "$DESKTOP_SESSION" == 'hyprland' ]]; then
-				hyprctl dispatch -- exit
-				sleep 2
-			fi
 			systemctl reboot
 		elif [[ $1 == '--suspend' ]]; then
-			mpc -q pause
-			amixer set Master mute
 			systemctl suspend
 		elif [[ $1 == '--logout' ]]; then
 			if [[ "$DESKTOP_SESSION" == 'hyprland' ]]; then

@@ -10,6 +10,6 @@
     # hyprland.enable = false
     # already added in hyprland config
 
-    settings = import ./config.nix { inherit assets; } // assets.colors.hyprpanel;
+    settings = import ./config.nix { inherit assets; } // assets.colors.hyprpanel.theme;
   };
 }

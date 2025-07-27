@@ -72,7 +72,7 @@
           valign = "bottom";
         }
         {
-          text = "cmd[update:60000] echo \"<b> \"$(uptime | awk -F'( |,|:)+' '{d=h=m=0; if ($7==\"min\") m=$6; else {if ($7~/jour/) {d=$6;h=$7;m=$8} else {h=$6;m=$7}}} {print d+0,\"jours,\",h+0,\"heures,\",m+0,\"minutes.\"}')\" </b>\"";
+          text = "cmd[update:60000] echo \"<b> \"$(uptime | awk -F'( |,|:)+' '{d=h=m=0; if ($7==\"min\") m=$6; else {if ($6~/jour/) {d=$6;h=$7;m=$8} else {h=$6;m=$7}}} {print d+0,\"jours,\",h+0,\"heures,\",m+0,\"minutes.\"}')\" </b>\"";
           font_size = "24";
           font_family = "Product Sans";
           position = "0, 0";
