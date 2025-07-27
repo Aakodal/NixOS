@@ -71,9 +71,17 @@
 
   bar = {
     systray.customIcons = {
+      chrome_status_icon_1 = {
+        icon = "";
+        color = assets.colors.hyprpanel.systrayIcons.discord;
+      };
       steam = {
         icon = "󰓓";
         color = assets.colors.hyprpanel.systrayIcons.steam;
+      };
+      udiskie = {
+        icon = "";
+        color = assets.colors.hyprpanel.systrayIcons.udiskie;
       };
     };
     customModules.worldclock.tz = [ "Europe/Paris" ];
@@ -95,6 +103,20 @@
         middle = [ "workspaces" ];
         right = [ "volume" "network" "bluetooth" "battery" "systray" "clock" "notifications" ];
       };
+    };
+
+    workspaces.reverse_scroll = true;
+
+    windowtitle = { # God forbid this damn bar has proper docs
+      custom_title = false;
+      class_name = false;
+      title_map = [
+        ["com.github.rafostar.clapper" ""]
+        ["org.gnome.fileroller" ""]
+        ["codium" ""]
+        ["org.gnome.loupe" ""]
+        ["onlyoffice" ""]
+      ];
     };
   };
 }

@@ -1,6 +1,8 @@
 { base }: {
   systrayIcons = {
+    discord = base.anthracite;
     steam = base.anthracite;
+    udiskie = base.anthracite;
   };
 
   theme = {
