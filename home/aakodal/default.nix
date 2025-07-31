@@ -10,6 +10,7 @@
     ./hyprland
     ./packages
     ./themes
+    ./xcompose
     ./xdg.nix
   ];
 
