@@ -9,6 +9,7 @@ _: {
       "$mod SHIFT, E, exec, '/home/aakodal/.config/rofi/scripts/powermenu.sh'"
       "$mod SHIFT, P, exec, '/home/aakodal/.config/rofi/scripts/powerprofiles.sh'"
       "$mod SHIFT, X, exec, '/home/aakodal/.config/rofi/scripts/compose.sh'"
+      "$mod SHIFT, B, exec, '/home/aakodal/.config/rofi/scripts/keyhint.sh'"
       "$mod, P, pseudo, "
       "$mod, J, togglesplit, "
       "$mod, F, togglefloating, "
