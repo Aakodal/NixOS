@@ -1,8 +1,7 @@
 _: {
   wayland.windowManager.hyprland.settings = {
-    gestures = {
-      workspace_swipe = true;
-      workspace_swipe_fingers = 2;
-    };
+    gesture = [
+      "3, horizontal, workspace"
+    ];
   };
 }

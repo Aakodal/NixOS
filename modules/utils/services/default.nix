@@ -1,5 +1,6 @@
 { pkgs, ... }: {
   imports = [
+    ./codecs.nix
     ./login.nix
     ./printing.nix
     ./tumbler.nix

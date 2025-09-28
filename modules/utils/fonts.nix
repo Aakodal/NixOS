@@ -23,20 +23,21 @@
     };
 
     packages = with pkgs; [
-      calibri
+      aptos
       corefonts
       dejavu_fonts
       lato
       material-icons
       material-symbols
       material-design-icons
+      nerd-fonts.jetbrains-mono
       noto-fonts
       noto-fonts-cjk-sans
       noto-fonts-emoji
       powerline-fonts
       product-sans
       roboto
-      nerd-fonts.jetbrains-mono
+      vista-fonts
     ];
 
     # DON'T FORGET TO RECOPY .local/share/fonts OR SOME APPS WON'T INTEGRATE FONTS!
