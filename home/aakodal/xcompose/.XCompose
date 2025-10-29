@@ -1,5 +1,8 @@
 include "%L"
 
+<Multi_key> <e> <e> : "⊢"
+<Multi_key> <e> <E> : "⊣"
+
 <Multi_key> <g> <a> : "α"
 <Multi_key> <g> <b> : "β"
 <Multi_key> <g> <g> : "γ"
@@ -51,16 +54,17 @@ include "%L"
 <Multi_key> <G> <p> <s> : "Ψ"
 <Multi_key> <G> <w> : "Ω"
 
+<Multi_key> <l> <t> : "⊤"
+<Multi_key> <l> <b> : "⊥"
+<Multi_key> <l> <a> : "∧"
+<Multi_key> <l> <v> : "∨"
+<Multi_key> <L> <a> : "⋀"
+<Multi_key> <L> <v> : "⋁"
+
 <Multi_key> <q> <a> : "∀"
 <Multi_key> <q> <e> : "∃"
 <Multi_key> <q> <E> : "∄"
-<Multi_key> <S> <n> : "ℕ"
-<Multi_key> <S> <z> : "ℤ"
-<Multi_key> <S> <d> : "𝔻"
-<Multi_key> <S> <q> : "ℚ"
-<Multi_key> <S> <r> : "ℝ"
-<Multi_key> <S> <c> : "ℂ"
-<Multi_key> <S> <h> : "ℍ"
+
 <Multi_key> <s> <e> : "∅"
 <Multi_key> <s> <u> : "∪"
 <Multi_key> <s> <n> : "∩"
@@ -73,29 +77,36 @@ include "%L"
 <Multi_key> <s> <S> : "∩"
 <Multi_key> <s> <e> : "∅"
 
-<Multi_key> <e> <e> : "⊢"
-<Multi_key> <e> <E> : "⊣"
-<Multi_key> <x> <x> : "×"
-<Multi_key> <l> <t> : "⊤"
-<Multi_key> <l> <b> : "⊥"
-<Multi_key> <l> <a> : "∧"
-<Multi_key> <l> <v> : "∨"
-<Multi_key> <L> <a> : "⋀"
-<Multi_key> <L> <v> : "⋁"
+<Multi_key> <S> <n> : "ℕ"
+<Multi_key> <S> <z> : "ℤ"
+<Multi_key> <S> <d> : "𝔻"
+<Multi_key> <S> <q> : "ℚ"
+<Multi_key> <S> <r> : "ℝ"
+<Multi_key> <S> <c> : "ℂ"
+<Multi_key> <S> <h> : "ℍ"
 
-<Multi_key> <o> : "∘"
+<Multi_key> <x> <x> : "×"
+
 <Multi_key> <semicolon> : "∙"
+
 <Multi_key> <period> : "∙"
+
+<Multi_key> <dead_tilde> <dead_tilde> : "≈"
+
+<Multi_key> <equal> <dead_tilde> : "≃"
+<Multi_key> <equal> <greater> : "➔"
 <Multi_key> <equal> <equal> <dead_tilde> : "≌"
 <Multi_key> <equal> <equal> <equal> : "≡"
-<Multi_key> <dead_tilde> <dead_tilde> : "≈"
-<Multi_key> <equal> <dead_tilde> : "≃"
+
+<Multi_key> <minus> <greater> : "→"
 
 <Multi_key> <bracketleft> <bracketleft> : "⟦"
 <Multi_key> <bracketright> <bracketright> : "⟧"
+
 <Multi_key> <less> : "⟨"
 <Multi_key> <greater> : "⟩"
 
+<Multi_key> <o> : "∘"
 <Multi_key> <o> <plus> : "⊕"
 <Multi_key> <o> <minus> : "⊖"
 <Multi_key> <o> <x> : "⊗"

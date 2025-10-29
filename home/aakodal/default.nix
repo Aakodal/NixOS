@@ -7,6 +7,7 @@
 }: {
   imports = [
     ./apps
+    ./games
     ./hyprland
     ./packages
     ./themes
