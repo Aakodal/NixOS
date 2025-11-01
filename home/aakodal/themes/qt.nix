@@ -1,12 +1,15 @@
 {
   pkgs,
   ...
-}: {
+}: let
+  theme-pkg = pkgs.orchis-kde;
+  theme-name = "Orchis";
+in  {
   qt = {
     enable = true;
 
     style = {
-      package = pkgs.qogir-kde;
+      package = theme-pkg;
       name = "kvantum";
     };
   };
@@ -30,20 +33,16 @@
   };
 
   xdg.configFile = {
-    "kdeglobals".source = "${pkgs.qogir-kde}/share/color-schemes/QogirLight.colors";
-    "Kvantum/Qogir-light/Qogir-light.kvconfig".source = builtins.fetchurl {
-      url = "https://raw.githubusercontent.com/vinceliuice/Qogir-kde/master/Kvantum/Qogir-light/Qogir-light.kvconfig";
-      sha256 = "042dfij55dzmmzsgv2mj123a148kdxcxs6w48b0i352q45aaxjg1";
-    };
+    "kdeglobals".source = "${theme-pkg}/share/color-schemes/${theme-name}.colors";
 
-    # "Kvantum/Qogir-light/Qogir-light.svg".source = builtins.fetchurl {
-    #   url = "https://raw.githubusercontent.com/vinceliuice/Qogir-kde/master/Kvantum/Qogir-light/Qogir-light.svg";
-    #   sha256 = "1p7i5fmq519a5as1zh90gfk2jij0a5b9fxh019vswsshmyp87zrs";
-    # };
+    "Kvantum/${theme-name}" = {
+      source = "${theme-pkg}/share/Kvantum/Orchis";
+      recursive = true;
+    };
 
     "Kvantum/kvantum.kvconfig".text = ''
       [General]
-      theme=Qogir-light
+      theme=${theme-name}
     '';
   };
 }

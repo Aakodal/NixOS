@@ -2,21 +2,20 @@
   pkgs,
   ...
 }: let
-  qogir = pkgs.qogir-theme.override {
-    themeVariants = [ "default" ];
-    colorVariants = [ "light" ];
-    tweaks = [ "round" ];
+  orchis = pkgs.orchis-theme.override {
+    border-radius = 5;
+    tweaks = [ "dracula" ]; # less vibrant color to match DE
   };
-in {
+in  {
   home = {
     packages = with pkgs; [
       glib
-      qogir
+      orchis
       dconf
     ];
 
     sessionVariables = {
-      GTK_THEME = "Qogir-Light";
+      GTK_THEME = "Orchis-Red-Light-Dracula";
       GTK_USE_PORTAL = "1";
     };
   };
@@ -25,8 +24,8 @@ in {
     enable = true;
 
     theme = {
-      name = "Qogir-Light";
-      package = qogir;
+      name = "Orchis-Red-Light-Dracula";
+      package = orchis;
     };
 
     font = {
