@@ -5,7 +5,7 @@
   ...
 }: {
   home.packages = with pkgs; [
-    onlyoffice-bin
+    onlyoffice-desktopeditors
     zotero
     hunspell
     hunspellDicts.fr-any

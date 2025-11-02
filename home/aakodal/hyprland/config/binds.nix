@@ -1,4 +1,8 @@
-_: {
+{
+  lib,
+  osConfig,
+  ...
+}: {
   wayland.windowManager.hyprland.settings = {
     "$mod" = "SUPER";
 
@@ -20,7 +24,8 @@ _: {
       # Apps
       "$mod, N, exec, nemo"
       "$mod, T, exec, zen"
-      ", Print, exec, bash -c \"dim=\\\"$(slurp)\\\"; if [ -z \\\"\\\$dim\\\" ]; then exit 1; else grim -g \\\"\\\$dim\\\" -t png - | wl-copy && notify-send \\\"Capture d'écran\\\" \\\"Capture d'écran sauvegardée dans le presse-papiers.\\\"; fi\""
+      # ", Print, exec, bash -c \"dim=\\\"$(slurp)\\\"; if [ -z \\\"\\\$dim\\\" ]; then exit 1; else grim -g \\\"\\\$dim\\\" -t png - | wl-copy && notify-send \\\"Capture d'écran\\\" \\\"Capture d'écran sauvegardée dans le presse-papiers.\\\"; fi\""
+      ", Print, exec,${lib.optionalString (osConfig.networking.hostName == "niflheim") " QT_SCALE_FACTOR=0.888888"} flameshot gui --raw | wl-copy"
       "$mod, C, exec, hyprpicker -a"
 
       # Multimedia
