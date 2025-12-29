@@ -10,6 +10,7 @@
 
     profiles.default = {
       extensions = with pkgs.vscode-extensions; [
+        ms-python.python
         ms-python.vscode-pylance
         ms-ceintl.vscode-language-pack-fr
         jnoortheen.nix-ide

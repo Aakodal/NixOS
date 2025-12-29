@@ -41,7 +41,7 @@ in {
     modules = [
       ./niflheim
       { networking.hostName = "niflheim"; }
-    ] ++ [ wayland ] ++ shared;
+    ] ++ [ virtualization wayland ] ++ shared;
     specialArgs = { inherit assets inputs outputs self; };
   };
 }

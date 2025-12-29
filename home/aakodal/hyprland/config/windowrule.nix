@@ -1,10 +1,10 @@
 _: {
   wayland.windowManager.hyprland.settings = {
     windowrule = [
-      "opacity 0.75 0.75, class:nemo"
-      "float, class:flameshot"
-      "opacity 0.75 0.75, class:WebCord"
-      "fullscreen, class:dotnet, title:^Terraria(.*)"
+      "match:class nemo, opacity 0.75"
+      "match:class WebCord, opacity 0.75"
+      "match:class flameshot, float 1"
+      "match:class dotnet, match:title ^Terraria(.*), fullscreen 1"
     ];
   };
 }

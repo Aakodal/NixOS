@@ -11,7 +11,7 @@
     pavucontrol
     pulsemixer
     pamixer
-    clapper
+    vlc
     gimp
     loupe
   ];

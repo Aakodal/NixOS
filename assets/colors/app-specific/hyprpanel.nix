@@ -3,6 +3,7 @@
     discord = base.anthracite;
     steam = base.anthracite;
     udiskie = base.anthracite;
+    vlc = base.anthracite;
   };
 
   theme = {

@@ -10,6 +10,7 @@
 in {
   imports = [
     ./hyprpanel
+    ./clock.nix
     ./hyprlock.nix
     ./hypridle.nix
   ] ++ filter (lib.strings.hasSuffix ".nix") (

@@ -70,22 +70,28 @@
   };
 
   bar = {
-    systray.customIcons = {
+    systray.customIcons = let
+      appColors = assets.colors.hyprpanel.systrayIcons;
+    in {
       chrome_status_icon_1 = {
         icon = "";
-        color = assets.colors.hyprpanel.systrayIcons.discord;
+        color = appColors.discord;
       };
       steam = {
         icon = "󰓓";
-        color = assets.colors.hyprpanel.systrayIcons.steam;
+        color = appColors.steam;
       };
       udiskie = {
         icon = "";
-        color = assets.colors.hyprpanel.systrayIcons.udiskie;
+        color = appColors.udiskie;
+      };
+      vlc = {
+        icon = "";
+        color = appColors.vlc;
       };
     };
     customModules.worldclock.tz = [ "Europe/Paris" ];
-    clock.format = "%A %d %b %H:%M:%S";
+    clock.format = "";
     launcher.autoDetectIcon = true;
     network = {
       showWifiInfo = true;

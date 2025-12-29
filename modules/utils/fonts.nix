@@ -25,6 +25,7 @@
     packages = with pkgs; [
       aptos
       corefonts
+      custom-fonts
       dejavu_fonts
       lato
       material-icons

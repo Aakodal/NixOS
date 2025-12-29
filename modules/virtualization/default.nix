@@ -8,9 +8,9 @@
     virt-manager
     kvmtool
     polkit_gnome
-    libsForQt5.polkit-kde-agent
     freerdp
     bc
+    docker-compose
   ];
 
   security.polkit.enable = true;
@@ -23,15 +23,12 @@
     libvirtd = {
       enable = true;
       qemu = {
-        ovmf = {
-          enable = true;
-          packages = [pkgs.OVMFFull.fd];
-        };
         swtpm.enable = true;
         package = pkgs.qemu_kvm;
       };
     };
+    docker.enable = true;
   };
 
-  users.users.aakodal.extraGroups = [ "libvirt" "libvirtd" ];
+  users.users.aakodal.extraGroups = [ "libvirt" "libvirtd" "docker" ];
 }
