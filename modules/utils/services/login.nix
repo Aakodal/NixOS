@@ -5,7 +5,7 @@
 }: let
   qt5 = pkgs.libsForQt5.qt5;
 
-  sddm-theme = inputs.silentSDDM.packages.${pkgs.system}.default.override {
+  sddm-theme = inputs.silentSDDM.packages.${pkgs.stdenv.hostPlatform.system}.default.override {
     theme = "default";
   };
 in  {
@@ -37,5 +37,5 @@ in  {
       };
     };
   };
-  services.displayManager.sessionPackages = [ inputs.hyprland.packages.${pkgs.system}.default ];
+  services.displayManager.sessionPackages = [ inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.default ];
 }

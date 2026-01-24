@@ -1,5 +1,5 @@
 { base }: {
-  weekDay = base.brightRed;
-  month = base.brightRed;
+  day = base.brightRed;
+  calendar = base.brightRed;
   hour = base.brightRed;
 }

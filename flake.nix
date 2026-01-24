@@ -3,8 +3,21 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     nixpkgs-wayland.url = "github:nix-community/nixpkgs-wayland";
 
-
     flake-utils.url = "github:numtide/flake-utils";
+
+    rust-overlay = {
+      url = "github:oxalica/rust-overlay";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+
+    ewwii = {
+      url = "github:Ewwii-sh/ewwii";
+      inputs = {
+        nixpkgs.follows = "nixpkgs";
+        rust-overlay.follows = "rust-overlay";
+      };
+    };
 
     home-manager =  {
       url = "github:nix-community/home-manager";
@@ -16,25 +29,12 @@
     # Nix Language server
     nil = {
       url = "github:oxalica/nil";
-      inputs = {
-        nixpkgs.follows = "nixpkgs";
-        rust-overlay.follows = "rust-overlay";
-      };
+      inputs.nixpkgs.follows = "nixpkgs";
     };
 
     nvf = {
       url = "github:NotAShelf/nvf";
-      inputs = {
-        nixpkgs.follows = "nixpkgs";
-        nil.follows = "nil";
-        flake-utils.follows = "flake-utils";
-      };
-    };
-
-    rust-overlay = {
-      url = "github:oxalica/rust-overlay";
       inputs.nixpkgs.follows = "nixpkgs";
-      inputs.flake-utils.follows = "flake-utils";
     };
 
     silentSDDM = {

@@ -9,8 +9,8 @@
   pkgsSystem = pkgs.stdenv.hostPlatform.system;
 in {
   imports = [
+    ./clock
     ./hyprpanel
-    ./clock.nix
     ./hyprlock.nix
     ./hypridle.nix
   ] ++ filter (lib.strings.hasSuffix ".nix") (
