@@ -44,6 +44,6 @@ in {
       }
     '';
 
-    "${config.xdg.configHome}/ewwii/ewwii.rhai".source = ./ewwii.rhai;
+    "${config.xdg.configHome}/ewwii/ewwii.nbcl".source = ./ewwii.nbcl;
   };
 }

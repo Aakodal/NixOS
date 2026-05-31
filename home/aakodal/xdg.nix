@@ -56,6 +56,7 @@
     userDirs = {
       enable = true;
       createDirectories = true;
+      setSessionVariables = true;
 
       desktop = "${config.home.homeDirectory}/Bureau";
       documents = "${config.home.homeDirectory}/Documents";

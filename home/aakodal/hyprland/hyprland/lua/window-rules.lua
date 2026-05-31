@@ -1,0 +1,4 @@
+hl.window_rule({ match = { class = "nemo" }, opacity = "0.75" })
+hl.window_rule({ match = { class = "flameshot" }, float = true })
+hl.window_rule({ match = { class = "dotnet", title = "^Terraria(.*)" }, fullscreen = true })
+hl.window_rule({ match = { class = "^winboat-.*" }, suppress_event = "maximize fullscreen activate activatefocus" })

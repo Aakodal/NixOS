@@ -1,4 +1,5 @@
 {
+  config,
   inputs,
   pkgs,
   lib,
@@ -14,7 +15,7 @@ in {
     ./hyprlock.nix
     ./hypridle.nix
   ] ++ filter (lib.strings.hasSuffix ".nix") (
-    map toString (filter (path: path != ./default.nix) (lib.filesystem.listFilesRecursive ./config))
+    map toString (filter (path: path != ./default.nix) (lib.filesystem.listFilesRecursive ./hyprland))
   );
 
   home.packages = with pkgs; [
@@ -31,9 +32,24 @@ in {
 
   wayland.windowManager.hyprland = {
     enable = true;
+    configType = "lua";
     systemd.enable = true;
     xwayland.enable = true;
     package = inputs.hyprland.packages.${pkgsSystem}.hyprland;
     portalPackage = inputs.hyprland.packages.${pkgsSystem}.xdg-desktop-portal-hyprland;
+  };
+
+  #home.file."${config.xdg.configHome}/hypr/hyprland.lua".text
+  wayland.windowManager.hyprland.extraConfig = builtins.concatStringsSep "\n" (
+    map (x: "require(\"hyprland/${x}\")") (
+      map (y: builtins.substring 0 ((builtins.stringLength y) - 4) y) (map builtins.baseNameOf (
+        filter (path: path != ./default.nix) (lib.filesystem.listFilesRecursive ./hyprland)
+      ))
+    )
+  );
+
+  home.file."${config.xdg.configHome}/hypr/hyprland" = {
+    source = ./hyprland/lua;
+    recursive = true;
   };
 }

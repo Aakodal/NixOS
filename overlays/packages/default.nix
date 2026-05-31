@@ -1,5 +1,6 @@
 {
-  pkgs
+  pkgs,
+  ...
 }: {
   aakodal-catppuccin-grub = pkgs.callPackage ./aakodal-catppuccin-grub {};
   aptos = pkgs.callPackage ./aptos {};

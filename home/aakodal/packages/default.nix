@@ -2,7 +2,7 @@ _: {
   imports = [
     ./macchina
     ./bat.nix
-    ./neovim.nix
+#    ./neovim.nix
     ./util.nix
   ];
 }

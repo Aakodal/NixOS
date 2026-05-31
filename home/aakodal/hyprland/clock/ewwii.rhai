@@ -1,4 +1,4 @@
-enter([
+tree([
     poll("day", #{
         initial: "L U N D I",
         interval: "1s",

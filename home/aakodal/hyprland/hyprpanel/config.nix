@@ -91,7 +91,7 @@
       };
     };
     customModules.worldclock.tz = [ "Europe/Paris" ];
-    clock.format = "";
+    clock.format = "%H:%M:%S";
     launcher.autoDetectIcon = true;
     network = {
       showWifiInfo = true;

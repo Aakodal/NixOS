@@ -2,9 +2,8 @@
   pkgs,
   ...
 }: {
-  programs.vscode = {
+  programs.vscodium = {
     enable = true;
-    package = pkgs.vscodium;
 
     mutableExtensionsDir = true;
 
@@ -20,6 +19,9 @@
       userSettings = {
         "window.title" = "\${dirty}\${rootName}\${separator}./\${activeEditorMedium}";
         "workbench.colorTheme" = "GitHub Light Default";
+        "Lua.workspace.library" = [
+          "/usr/share/hypr/stubs"
+        ];
       };
     };
   };

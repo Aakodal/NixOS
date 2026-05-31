@@ -23,5 +23,6 @@
     pciutils
     android-tools
     dotnet-sdk
+    proton-vpn
   ];
 }

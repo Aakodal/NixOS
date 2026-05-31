@@ -5,6 +5,7 @@
   ...
 }: {
   home.packages = with pkgs; [
+    libreoffice-qt-fresh
     onlyoffice-desktopeditors
     zotero
     hunspell

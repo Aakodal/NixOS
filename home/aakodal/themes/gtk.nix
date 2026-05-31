@@ -1,4 +1,5 @@
 {
+  config,
   pkgs,
   ...
 }: let
@@ -32,5 +33,7 @@ in  {
       name = "Product Sans";
       size = 10;
     };
+
+    gtk4.theme = config.gtk.theme;
   };
 }

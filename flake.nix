@@ -32,10 +32,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    nvf = {
-      url = "github:NotAShelf/nvf";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    # nvf = {
+    #   url = "github:NotAShelf/nvf";
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    # };
 
     silentSDDM = {
       url = "github:uiriansan/SilentSDDM";
