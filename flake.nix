@@ -43,7 +43,7 @@
     };
 
     zen-browser = {
-      url = "github:0xc000022070/zen-browser-flake";
+      url = "github:youwen5/zen-browser-flake";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
@@ -54,10 +54,11 @@
     ...
   } @ inputs: let
     inherit (self) outputs;
+    lib = import ./lib { inherit inputs; };
     assets = import ./assets;
   in {
-    overlays = import ./overlays { inherit inputs outputs; };
-    nixosConfigurations = import ./hosts { inherit self nixpkgs assets inputs outputs; };
+    overlays = import ./overlays { inherit lib inputs outputs; };
+    nixosConfigurations = import ./hosts { inherit self nixpkgs assets inputs outputs lib; };
   };
 
   nixConfig = {

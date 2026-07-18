@@ -6,8 +6,10 @@
 }: let
   hld = "hl.dsp";
   exec = "${hld}.exec_cmd";
+
+  fileName = lib.custom.removeExt (builtins.baseNameOf __curPos.file);
 in {
-  home.file."${config.xdg.configHome}/hypr/hyprland/binds.lua".text = ''
+  home.file."${config.xdg.configHome}/hypr/hyprland/${fileName}.lua".text = ''
     hl.bind("SUPER + Return", ${exec}("alacritty"))
     hl.bind("SUPER + Q", ${hld}.window.close())
 
@@ -25,7 +27,7 @@ in {
     hl.bind("SUPER + L", ${exec}("hyprlock"))
 
     hl.bind("SUPER + N", ${exec}("nemo"))
-    hl.bind("SUPER + T", ${exec}("zen-beta"))
+    hl.bind("SUPER + T", ${exec}("zen"))
     hl.bind("Print", ${exec}("${lib.optionalString (osConfig.networking.hostName == "niflheim") "QT_SCALE_FACTOR=0.888888 "}flameshot gui --raw | wl-copy"))
     hl.bind("SUPER + C", ${exec}("hyprpicker -a"))
 

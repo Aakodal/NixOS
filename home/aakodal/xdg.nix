@@ -9,16 +9,16 @@
       enable = true;
 
       associations.added = {
-        "text/html" = "zen-beta.desktop";
-        "image/svg+xml" = "zen-beta.desktop";
+        "text/html" = "zen.desktop";
+        "image/svg+xml" = "zen.desktop";
       };
 
       defaultApplications = {
         # Browser
-        "x-scheme-handler/http" = "zen-beta.desktop";
-        "x-scheme-handler/https" = "zen-beta.desktop";
-        "x-scheme-handler/chrome" = "zen-beta.desktop";
-        "application/pdf" = "zen-beta.desktop";
+        "x-scheme-handler/http" = "zen.desktop";
+        "x-scheme-handler/https" = "zen.desktop";
+        "x-scheme-handler/chrome" = "zen.desktop";
+        "application/pdf" = "zen.desktop";
 
         # File explorer
         "inode/directory" = "nemo.desktop";

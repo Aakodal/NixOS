@@ -1,6 +1,7 @@
 {
   assets,
   self,
+  lib,
   ...
 } @ inputs: let 
   inputs = self.inputs;
@@ -31,7 +32,7 @@ in {
       ./helheim
       { networking.hostName = "helheim"; }
     ] ++ [ virtualization wayland ] ++ shared;
-    specialArgs = { inherit assets inputs outputs self; };
+    specialArgs = { inherit assets lib inputs outputs self; };
   };
 
   # ASUS Zenbook 15
@@ -42,6 +43,6 @@ in {
       ./niflheim
       { networking.hostName = "niflheim"; }
     ] ++ [ virtualization wayland ] ++ shared;
-    specialArgs = { inherit assets inputs outputs self; };
+    specialArgs = { inherit assets lib inputs outputs self; };
   };
 }

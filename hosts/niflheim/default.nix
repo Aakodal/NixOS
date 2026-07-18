@@ -14,4 +14,5 @@ in {
   hardware.sensor.iio.enable = false;
 
   services.xserver.videoDrivers = ["amdgpu"];
+  services.joycond.enable = true;
 }

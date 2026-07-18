@@ -1,9 +1,12 @@
 {
   config,
+  lib,
   osConfig,
   ...
-}: {
-  home.file."${config.xdg.configHome}/hypr/hyprland/input.lua".text = ''
+}: let
+  fileName = lib.custom.removeExt (builtins.baseNameOf __curPos.file);
+in {
+  home.file."${config.xdg.configHome}/hypr/hyprland/${fileName}.lua".text = ''
     hl.config({
         input = {
             follow_mouse = true,

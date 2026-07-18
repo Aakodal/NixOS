@@ -18,7 +18,7 @@ in  {
     packages = with pkgs; [
       qt5.qttools
       qt6Packages.qtstyleplugin-kvantum
-      libsForQt5.qtstyleplugin-kvantum
+      qt6Packages.qtstyleplugin-kvantum
       libsForQt5.qt5ct
       kdePackages.breeze-icons
     ];

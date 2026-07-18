@@ -1,5 +1,6 @@
 {
   config,
+  lib,
   osConfig,
   ...
 }: let
@@ -16,8 +17,10 @@
       scale = "1.125";
     };
   };
+
+  fileName = lib.custom.removeExt (builtins.baseNameOf __curPos.file);
 in {
-  home.file."${config.xdg.configHome}/hypr/hyprland/environment.lua".text = ''
+  home.file."${config.xdg.configHome}/hypr/hyprland/${fileName}.lua".text = ''
     hl.env("XCURSOR_SIZE", "${customFactors.${host}.cursor}")
 
     hl.env("QT_SCALE_FACTOR", "1")

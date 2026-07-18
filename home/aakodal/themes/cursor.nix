@@ -4,6 +4,7 @@
 }: {
   home.pointerCursor = {
     package = pkgs.bibata-cursors;
+    enable = true;
     name = "Bibata-Modern-Ice";
 
     size = 32;

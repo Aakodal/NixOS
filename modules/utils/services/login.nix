@@ -3,8 +3,6 @@
   inputs,
   ...
 }: let
-  qt5 = pkgs.libsForQt5.qt5;
-
   sddm-theme = inputs.silentSDDM.packages.${pkgs.stdenv.hostPlatform.system}.default.override {
     theme = "default";
   };

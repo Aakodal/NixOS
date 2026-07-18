@@ -98,13 +98,20 @@ include "%L"
 <Multi_key> <equal> <equal> <dead_tilde> : "≌"
 <Multi_key> <equal> <equal> <equal> : "≡"
 
+<Multi_key> <minus> <minus> : "–"
+<Multi_key> <minus> <minus> <minus> : "—"
 <Multi_key> <minus> <greater> : "→"
+
+<Multi_key> <a> <KP_9> : "↗"
+<Multi_key> <a> <KP_3> : "↘"
 
 <Multi_key> <bracketleft> <bracketleft> : "⟦"
 <Multi_key> <bracketright> <bracketright> : "⟧"
 
 <Multi_key> <less> : "⟨"
+<Multi_key> <less> <equal> : "≤"
 <Multi_key> <greater> : "⟩"
+<Multi_key> <greater> <equal> : "≥"
 
 <Multi_key> <o> : "∘"
 <Multi_key> <o> <plus> : "⊕"

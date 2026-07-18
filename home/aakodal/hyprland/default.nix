@@ -1,8 +1,8 @@
 {
   config,
   inputs,
-  pkgs,
   lib,
+  pkgs,
   ...
 }: let
   inherit (builtins) filter map toString;
@@ -10,8 +10,8 @@
   pkgsSystem = pkgs.stdenv.hostPlatform.system;
 in {
   imports = [
+    ./bar
     ./clock
-    ./hyprpanel
     ./hyprlock.nix
     ./hypridle.nix
   ] ++ filter (lib.strings.hasSuffix ".nix") (
@@ -42,7 +42,7 @@ in {
   #home.file."${config.xdg.configHome}/hypr/hyprland.lua".text
   wayland.windowManager.hyprland.extraConfig = builtins.concatStringsSep "\n" (
     map (x: "require(\"hyprland/${x}\")") (
-      map (y: builtins.substring 0 ((builtins.stringLength y) - 4) y) (map builtins.baseNameOf (
+      map lib.custom.removeExt (map builtins.baseNameOf (
         filter (path: path != ./default.nix) (lib.filesystem.listFilesRecursive ./hyprland)
       ))
     )
