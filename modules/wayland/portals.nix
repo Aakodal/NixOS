@@ -10,6 +10,6 @@
     ];
     config.common.default = "*";
 
-    wlr.enable = false;
+    wlr.enable = true;
   };
 }

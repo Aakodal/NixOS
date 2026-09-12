@@ -54,7 +54,7 @@
           valign = "top";
         }
         {
-          text = "cmd[update:18000000] echo \"$(date +\"%-d %B %Y\" | sed -e 's/é/e/g' | tr \"[:lower:]\" \"[:upper:]\")\"";
+          text = "cmd[update:18000000] echo \"$(date +\"%-d %B %Y\" | sed -e 's/é/e/g' -e 's/û/u/g' | tr \"[:lower:]\" \"[:upper:]\")\"";
           font_size = 28;
           font_family = "Astro Futuristic Font";
 

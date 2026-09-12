@@ -28,7 +28,7 @@ in {
 
     hl.bind("SUPER + N", ${exec}("nemo"))
     hl.bind("SUPER + T", ${exec}("zen"))
-    hl.bind("Print", ${exec}("${lib.optionalString (osConfig.networking.hostName == "niflheim") "QT_SCALE_FACTOR=0.888888 "}flameshot gui --raw | wl-copy"))
+    hl.bind("Print", ${exec}("grim -g \"$(slurp)\" - | satty -f -"))
     hl.bind("SUPER + C", ${exec}("hyprpicker -a"))
 
     hl.bind("XF86AudioMute", ${exec}("pamixer -t"))

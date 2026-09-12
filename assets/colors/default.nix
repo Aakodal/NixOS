@@ -9,4 +9,5 @@ in {
   hyprlock = import ./app-specific/hyprlock.nix { inherit base; };
   macchina = import ./app-specific/macchina.nix { inherit base; };
   rofi = import ./app-specific/rofi.nix { inherit base; };
+  satty = import ./app-specific/satty.nix { inherit base; };
 }

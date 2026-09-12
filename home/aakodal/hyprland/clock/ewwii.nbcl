@@ -13,7 +13,7 @@ Poll "hour" {
 Poll "calendar" {
     initial = "01 JANVIER 2000"
     interval = "1s"
-    cmd = "date +'%-d %B %Y' | sed -E 's/é/e/g' | tr '[:lower:]' '[:upper:]' "
+    cmd = "date +'%-d %B %Y' | sed -E -e 's/é/e/g' -e 's/û/u/g' | tr '[:lower:]' '[:upper:]' "
 }
 
 Window "clock" {
