@@ -6,5 +6,6 @@
     wineWow64Packages.waylandFull
     winetricks
     mono
+    protontricks
   ];
 }

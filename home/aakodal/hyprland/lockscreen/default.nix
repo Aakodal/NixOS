@@ -72,16 +72,7 @@
           valign = "center";
         }
         {
-          text = "   $DESC";
-          font_size = 34;
-          font_family = "Product Sans";
-
-          position = "0, 100";
-          halign = "center";
-          valign = "bottom";
-        }
-        {
-          text = "cmd[update:60000] echo \"<b> \"$(uptime | awk -F'( |,|:)+' '{d=h=m=0; if ($7==\"min\") m=$6; else {if ($6~/jour/) {d=$6;h=$7;m=$8} else {h=$6;m=$7}}; dt=ht=mt=\"\"; if (d>1) dt=\"jours,\"; else dt=\"jour,\"; if (h>1) ht=\"heures,\"; else ht=\"heure,\"; if (m>1) mt=\"minutes\"; else mt=\"minute\"} {print d+0,dt,h+0,ht,m+0,mt}')\" </b>\"";
+          text = "cmd[update:60000] echo \"<b> \"$(${./uptime.sh})\" </b>\"";
           font_size = "24";
           font_family = "Product Sans";
           position = "0, 0";

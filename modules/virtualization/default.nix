@@ -11,6 +11,7 @@
     freerdp
     bc
     docker-compose
+    winboat
   ];
 
   security.polkit.enable = true;

@@ -12,7 +12,7 @@ in {
   imports = [
     ./bar
     ./clock
-    ./hyprlock.nix
+    ./lockscreen
     ./hypridle.nix
   ] ++ filter (lib.strings.hasSuffix ".nix") (
     map toString (filter (path: path != ./default.nix) (lib.filesystem.listFilesRecursive ./hyprland))
@@ -26,6 +26,7 @@ in {
     hyprland-qt-support
     hyprland-qtutils
     hypridle
+    hyprshutdown
     hyprsunset
     wbg
   ];

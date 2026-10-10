@@ -10,7 +10,6 @@
     ./programming_languages.nix
     ./screenshot.nix
     ./vscodium.nix
-    ./winboat.nix
     ./wine.nix
   ];
 }

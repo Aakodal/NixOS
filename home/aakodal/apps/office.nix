@@ -5,9 +5,9 @@
   ...
 }: {
   home.packages = with pkgs; [
-    libreoffice-qt-fresh
+    libreoffice-qt
     onlyoffice-desktopeditors
-    zotero
+    # zotero
     hunspell
     hunspellDicts.fr-any
     hunspellDicts.en_US-large

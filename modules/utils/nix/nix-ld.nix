@@ -1,5 +1,6 @@
 {
   lib,
+  pkgs,
   ...
 }: {
   boot.binfmt.registrations = lib.genAttrs ["appimage" "AppImage"] (ext: {
@@ -11,4 +12,8 @@
   programs.nix-ld = {
     enable = true;
   };
+
+  environment.systemPackages = with pkgs; [
+    appimage-run
+  ];
 }

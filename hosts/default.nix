@@ -42,7 +42,7 @@ in {
     modules = [
       ./niflheim
       { networking.hostName = "niflheim"; }
-    ] ++ [ virtualization wayland ] ++ shared;
+    ] ++ [ wayland ] ++ shared;
     specialArgs = { inherit assets lib inputs outputs self; };
   };
 }
